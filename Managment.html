@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>Club-Managment</title>
+</head>
+<body>
+
+    <section class="header">
+    <div class="banner">
+        <div class="navbar">
+            <div>
+           <img src="clublogo.jpg" class="logo">
+        </div>
+        <div class="navbar">
+            <div>
+               
+            </div>
+            <div id="menuItems">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="Managment.html"> Management</a></li>
+                    <li><a href="Event.html"> Event</a></li>
+                    <li><a href="Members-Area.html">Members Area</a></li>
+                    <li><a href="Dashboard.html">Dashboard</a></li>
+                    <!-- Add more menu items if needed -->
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </div>
+        
+        <div class="content">
+            <h1>Welcome to the <br>Club Mangement System</h1>
+            <!--<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Saepe, incidunt! Dolor dicta enim quia accusantium rem<br> sequi 
+                aliquam quidem dolorem illum recusandae, qui fugiat.</p>-->
+        <div>
+        <button type="button"><span></span>Watch-more</button>
+        <button type="button"><span></span><a href="index.html">Return-back</a></button>
+    </div>
+</div>
+</div>
+</section>
+
+
+<div class="container">
+    <h2>Welcome to the Club Management Page</h2>
+
+    <form id="memberForm">
+        <label for="memberName">Member Name:</label>
+        <input type="text" id="memberName" name="memberName" required>
+
+        <label for="memberEmail">Member Email:</label>
+        <input type="email" id="memberEmail" name="memberEmail" required>
+
+        <button type="button" onclick="addMember()">Add Member</button>
+    </form>
+
+    <div id="memberList">
+        <a href="Members-Area.html"> <h3>Member List</h3></a>
+        <ul id="list">
+          <li>-</li>
+        </ul>
+    </div>
+</div>
+
+    
+    
+    <section class="service">
+        
+        <h1>Services We Offer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="row">
+            <div class="service-col">
+                <h3>Beginner</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Cumque sit voluptatem ab delectus distinctio corporis quis, similique, 
+                    exe rcitationem eligendi placeat deleniti voluptatum ex vero facere culpa 
+                    quam accusantium doloribus aspernatur.</p>
+            </div>
+            <div class="service-col">
+                <h3>Intermediate</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Cumque sit voluptatem ab delectus distinctio corporis quis, similique, 
+                    exercitationem eligendi placeat deleniti voluptatum ex vero facere culpa 
+                    quam accusantium doloribus aspernatur.</p>
+            </div>
+            <div class="service-col">
+                <h3>Advanced</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Cumque sit voluptatem ab delectus distinctio corporis quis, similique, 
+                    exercitationem eligendi placeat deleniti voluptatum ex vero facere culpa 
+                    quam accusantium doloribus aspernatur.</p>
+            </div>
+        
+        </div> 
+   
+    </section>
+    <!--Java scrip for the toggle menu-->
+    
+
+    <!--Footer-->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Aliquam temporibus quia dolore, veritatis quis rem soluta expedita deserunt 
+            <br>architecto exercitationem molestiae excepturi autem? Ut dolorum, neque aliquid 
+            nam consequuntur voluptate!</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+            <p>Made with<i class="fa fa-heart-o">by Abdallah Abdurazak</i></p>
+    </section>
+
+    <script>
+        function addMember() {
+            // Get input values
+            var name = document.getElementById('memberName').value;
+            var email = document.getElementById('memberEmail').value;
+
+            // Create list item
+            var listItem = document.createElement('li');
+            listItem.textContent = `${name} - ${email}`;
+
+            // Append list item to the list
+            document.getElementById('list').appendChild(listItem);
+
+            // Clear form fields
+            document.getElementById('memberName').value = '';
+            document.getElementById('memberEmail').value = '';
+        }
+    </script>
+    
+</body>
+</html>

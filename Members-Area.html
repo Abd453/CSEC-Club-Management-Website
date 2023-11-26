@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Area</title>
+    <link rel="stylesheet" href="style.css"> <!-- Include your style.css file -->
+    <style>
+        /* Add additional styling specific to the Members-Area.html page as needed */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2, h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #memberList {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Add additional styling as needed */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to the Members Area</h2>
+
+        <div id="memberList">
+            <h3>Member List</h3>
+            <ul id="list"></ul>
+            <li>-</li>
+        </div>
+    </div>
+
+    <script>
+        function addMember() {
+            // Get input values
+            var name = document.getElementById('memberName').value;
+            var email = document.getElementById('memberEmail').value;
+
+            // Create list item
+            var listItem = document.createElement('li');
+            listItem.textContent = `${name} - ${email}`;
+
+            // Append list item to the list
+            document.getElementById('list').appendChild(listItem);
+
+            // Clear form fields
+            document.getElementById('memberName').value = '';
+            document.getElementById('memberEmail').value = '';
+        }
+    </script>
+</body>
+</html>

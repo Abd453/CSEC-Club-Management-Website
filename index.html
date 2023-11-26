@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>How to Make websites - Easy Tutorials</title>
+</head>
+<body>
+
+
+    <section class="header">
+    <div class="banner">
+        <div class="navbar">
+            <div>
+           <img src="clublogo.jpg" class="logo">
+        </div>
+        <div class="navbar">
+            <div>
+               
+            </div>
+            <div id="menuItems">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="Managment.html"> Management</a></li>
+                    <li><a href="Event.html"> Event</a></li>
+                    <li><a href="Members-Area.html">Members Area</a></li>
+                    <li><a href="Dashboard.html">Dashboard</a></li>
+                    <!-- Add more menu items if needed -->
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </div>
+        
+        <div class="content">
+            <h1>Design Club Mangement System</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Saepe, incidunt! Dolor dicta enim quia accusantium rem<br> sequi 
+                aliquam quidem dolorem illum recusandae, qui fugiat.</p>
+        <div>
+        <button type="button"><span></span>Watch more</button>
+        <button type="button1"><span></span><a class="l" href="Managment.html"> Subscribe</a></button>
+    </div>
+</div>
+</div>
+</section>
+
+    
+    
+    <section class="service">
+        
+        <h1>Services We Offer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="row">
+            <div class="service-col">
+                <h3>Beginner</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Cumque sit voluptatem ab delectus distinctio corporis quis, similique, 
+                    exe rcitationem eligendi placeat deleniti voluptatum ex vero facere culpa 
+                    quam accusantium doloribus aspernatur.</p>
+            </div>
+            <div class="service-col">
+                <h3>Intermediate</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Cumque sit voluptatem ab delectus distinctio corporis quis, similique, 
+                    exercitationem eligendi placeat deleniti voluptatum ex vero facere culpa 
+                    quam accusantium doloribus aspernatur.</p>
+            </div>
+            <div class="service-col">
+                <h3>Advanced</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Cumque sit voluptatem ab delectus distinctio corporis quis, similique, 
+                    exercitationem eligendi placeat deleniti voluptatum ex vero facere culpa 
+                    quam accusantium doloribus aspernatur.</p>
+            </div>
+        
+        </div> 
+   
+    </section>
+    <!--Java scrip for the toggle menu-->
+   
+
+    <!--Footer-->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Aliquam temporibus quia dolore, veritatis quis rem soluta expedita deserunt 
+            <br>architecto exercitationem molestiae excepturi autem? Ut dolorum, neque aliquid 
+            nam consequuntur voluptate!</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+            <p>Made with<i class="fa fa-heart-o">by Abdallah Abdurazak</i></p>
+    </section>
+
+
+<script>
+    function addMember() {
+        var memberName = document.getElementById('memberName').value;
+        var memberEmail = document.getElementById('memberEmail').value;
+
+        // Get the existing member list from localStorage or initialize an empty array
+        var members = JSON.parse(localStorage.getItem('members')) || [];
+
+        // Add the new member to the list
+        members.push({ name: memberName, email: memberEmail });
+
+        // Save the updated member list to localStorage
+        localStorage.setItem('members', JSON.stringify(members));
+
+        // Update the displayed member list
+        displayMembers();
+    }
+
+    function displayMembers() {
+        var memberList = document.getElementById('list');
+        memberList.innerHTML = ''; // Clear existing list
+
+        // Retrieve the member list from localStorage
+        var members = JSON.parse(localStorage.getItem('members')) || [];
+
+        // Create list items for each member and append them to the list
+        members.forEach(function (member) {
+            var listItem = document.createElement('li');
+            listItem.textContent = member.name + ' - ' + member.email;
+            memberList.appendChild(listItem);
+        });
+    }
+</script>
+    </body>
+    
+    </html>
+    
